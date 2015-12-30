@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ToDoApp - jQuery</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/todo.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <form class="form-inline marginTop30">
+                <div class="form-group">
+                    <label class="sr-only" for="task">To do List :</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="task" placeholder="Enter Your Task">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" id="addTask">Add Task</button>
+            </form>
+        </div>
+        <div class="col-md-offset-2 col-md-8">
+            <table class="table table-bordered marginTop30" id="taskTable">
+                <tr>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
