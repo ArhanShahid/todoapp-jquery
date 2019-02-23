@@ -1,40 +1,24 @@
-$(function(){
+$(() => {
 
-    $(document.body).on('click', '.deleteTask' ,function(){
-        $(this)
-            .closest("tr")
-            .fadeOut();
+    $(`#add-task`).on('click', () => {
+        const task = $(`#task`).val();
+        if (task) {
+            var value = `<li class="task">`;
+            value += `<input type="checkbox" value="${task}" name="task-done" class="mt-2 mr-1 task-done">`;
+            value += task;
+            value += `<button class='btn btn-sm btn-danger task-delete'>Delete</button>`;
+            value += `</li>`;
+            $(`#todos-list`).append(value);
+            $("#task").val("");
+        }
     });
 
-    $(document.body).on('click', '.taskChecked' ,function(){
-        $(this)
-            .closest("tr")
-            .toggleClass("textDecorationLineThrough");
+    $(document.body).on('click', '.task-delete', function () {
+        $(this).parent().fadeOut();
     });
 
-    $("#addTask").click(function() {
-
-        var value = "";
-        value += "<tr>";
-        value += "<td>";
-        value += $("#task").val();
-        value += "</td>";
-        value += "<td>";
-        value += "<button class='btn btn-xs btn-success taskChecked'>Done</button>";
-        value += "</td>";
-        value += "<td>";
-        value += "<button class='btn btn-xs btn-danger deleteTask'>Delete</button>";
-        value += "</td>";
-        value += "</tr>";
-
-        $("#taskTable").append(value);
-
+    $(document.body).on('click', '.task-done', function () {
+        $(this).parent().toggleClass("line");
     });
-
-
-
-
-
-
 
 });

@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ToDoApp - jQuery</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="HTML5, Bootstrap, jQuery ToDo App.">
+    <meta name="keywords" content="HTML,HTML5,CSS,JavaScript,jQuery,Bootstrap">
+    <meta name="author" content="http://arhanshahid.com/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/todo.css">
-    <script src="js/jquery-1.11.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="js/todo.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4">
-            <form class="form-inline marginTop30">
-                <div class="form-group">
-                    <label class="sr-only" for="task">To do List :</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="task" placeholder="Enter Your Task">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h5 class="text-center mt-5">jQuery Todo App</h5>
+                <form class="form-inline mt-5">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <input type="text" class="form-control" id="task" placeholder="Your Task ...">
                     </div>
-                </div>
-                <button type="button" class="btn btn-primary" id="addTask">Add Task</button>
-            </form>
+                    <button type="button" class="btn btn-primary mb-2" id="add-task">Add</button>
+                </form>
+            </div>
         </div>
-        <div class="col-md-offset-2 col-md-8">
-            <table class="table table-bordered marginTop30" id="taskTable">
-                <tr>
-                    <th>Task</th>
-                    <th>Status</th>
-                    <th>Delete</th>
-                </tr>
-            </table>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <hr>
+                <ul class="mt-5" id="todos-list"></ul>
+            </div>
         </div>
     </div>
-</div>
 </body>
 </html>
