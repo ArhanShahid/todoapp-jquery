@@ -14,7 +14,10 @@ $(() => {
     });
 
     $(document.body).on('click', '.task-delete', function () {
-        $(this).parent().fadeOut();
+        let self = this;
+        $(self).parent().fadeOut('slow', function () {
+            $(self).parent().remove();
+        })
     });
 
     $(document.body).on('click', '.task-done', function () {
